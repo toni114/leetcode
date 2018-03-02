@@ -12,10 +12,10 @@
  */
 var mergeTwoLists = function(l1, l2) {
   // 题目有歧义，没说 merge 后的依然是 sorted
-  const FUCK_TYPE = 5
+  const TYPE = 5
 
   // 错误 1：蜘蛛 M 形
-  if (FUCK_TYPE === 1) {
+  if (TYPE === 1) {
 
     const root = l1 || l2
 
@@ -33,7 +33,7 @@ var mergeTwoLists = function(l1, l2) {
   }
 
   // 错误 2：示波器形
-  else if (FUCK_TYPE === 2) {
+  else if (TYPE === 2) {
 
     if (!(l1 && l2)) {
       return l2 || l1
@@ -54,7 +54,7 @@ var mergeTwoLists = function(l1, l2) {
   }
 
   // 正确 1：链表互切，啰嗦繁琐
-  else if (FUCK_TYPE === 3) {
+  else if (TYPE === 3) {
 
     if (!(l1 && l2)) {
       return l1 || l2
@@ -76,7 +76,8 @@ var mergeTwoLists = function(l1, l2) {
   }
 
   // 正确 2：新链表，简洁明了
-  else if (FUCK_TYPE === 4) {
+  // TODO 性能优化：类似上面解法 1，找到下一个大小交换点之后再作操作，以减少链表结点的调整数量
+  else if (TYPE === 4) {
 
     const dummy = new ListNode(0)
     let node = dummy
@@ -100,7 +101,8 @@ var mergeTwoLists = function(l1, l2) {
   }
 
   // 正确 3：递归。。。
-  else if (FUCK_TYPE === 5) {
+  // TODO 性能优化：类似上面解法 1，找到下一个大小交换点之后再作操作，以减少链表结点的调整数量
+  else if (TYPE === 5) {
 
     const merge = (l1, l2) => {
       if (!(l1 && l2)) {

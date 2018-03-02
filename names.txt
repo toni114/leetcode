@@ -1,0 +1,10 @@
+名词列表
+
+vertex(a.顶点V) node
+  b.结点（抽象为主）：数据结构 / 算法 / 拓扑 / Graph 图论 / 离散数学 / 几何 / 微分方程 / 线段端点 / 叶子、末端、端点？ / 竹节
+  c.节点（实体为主）：计算机网络资源（d.网点）？ / 银行网点 / 文章章节 Section 分段之间的连接 / 直线交点 / 交汇点？ / 绳结
+
+buffer stream(is-a queue?)
+stack queue  proiroty queue
+array list vector tuple link-list
+hash 哈希 散列 关联数组 集合 映射 变换

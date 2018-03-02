@@ -3,6 +3,7 @@
  * @return {boolean}
  */
 var isValid = function(s) {
+  // 重要性能优化点
   if (s.length % 2) {
     return false
   }

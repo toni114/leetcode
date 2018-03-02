@@ -4,6 +4,8 @@
  * @return {number}
  */
 var removeElement = function(nums, val) {
+  // 有点儿像快排的一趟排序…
+
   const TYPE = 2
 
   if (TYPE === 1) {
@@ -12,6 +14,8 @@ var removeElement = function(nums, val) {
     let n = nums.length
 
     while (i < n) {
+      // 这种解法虽然简洁，但是有个小“瑕疵”
+      // 就是这里可能会有多次无效交换，因为有可能 nums[--n] 也 === val
       if (nums[i] === val) {
         nums[i] = nums[--n]
       }

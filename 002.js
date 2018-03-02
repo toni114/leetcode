@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-  // 高精度加法
+  // 实质上是高精度加法
 
   let result = []
   let index = 0
@@ -27,6 +27,7 @@ var addTwoNumbers = function(l1, l2) {
     let sum = val1 + val2 + carry
     let value
 
+    // 这么干虽然略显啰嗦，但是性能表现显然比 / % 等潜在地要好
     if (sum < 10) {
       value = sum
       carry = 0
