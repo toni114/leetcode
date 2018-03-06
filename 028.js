@@ -12,7 +12,8 @@ var strStr = function(haystack, needle) {
   }
   else {
 
-    // 这才是正解…… LCS (这里指 substring!! not subsequence!!)
+    // 这才是正解…… KMP
+    // 相关的还有 LCS (这里指 substring!! not subsequence!!)
     // TODO
 
   }

@@ -4,6 +4,7 @@
  */
 var longestCommonPrefix = function(strs) {
   // TODO 是不是一开始把长度较短的字符串找出来作为比较基准性能会好些？
+  // TODO k-common substring problem
 
   const length = strs.length
 
