@@ -4,16 +4,13 @@
  */
 var longestCommonPrefix = function(strs) {
   // TODO 是不是一开始把长度较短的字符串找出来作为比较基准性能会好些？
+  //      或者用随机数做优化
   // TODO k-common substring problem
 
   const length = strs.length
 
-  if (length === 0) {
-    return ''
-  }
-
-  if (length === 1) {
-    return strs[0]
+  if (length < 2) {
+    return strs[0] || ''
   }
 
   let current = strs[0]
@@ -29,6 +26,7 @@ var longestCommonPrefix = function(strs) {
       }
     }
 
+    // 提前结束
     if (j === 0) {
       return ''
     }

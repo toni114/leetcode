@@ -19,15 +19,13 @@ var isValid = function(s) {
   for (let char of s) {
     let c = MAP[char]
 
+    // 不考虑非法字符，相当于 !!~'([{'.indexOf(char)
     if (!c) {
       stack.push(char)
       continue
     }
 
-    if (!stack.length) {
-      return false
-    }
-
+    // 包括 stack.length === 0 和 非法字符
     if (c !== stack.pop()) {
       return false
     }

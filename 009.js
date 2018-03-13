@@ -28,7 +28,7 @@ var isPalindrome = function(x) {
     let start = -1
     let end = x.length
 
-    for (;++start < --end && x[start] === x[end];) {}
+    for (;++start < --end && x[start] === x[end];);
 
     return start >= end
 

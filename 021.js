@@ -21,10 +21,10 @@ var mergeTwoLists = function(l1, l2) {
 
     while (l1 || l2) {
       if (l1) {
-        [l1.next, l1] = [l2, l1.next]
+        ;[l1.next, l1] = [l2, l1.next]
       }
       if (l2) {
-        [l2.next, l2] = [l1, l2.next]
+        ;[l2.next, l2] = [l1, l2.next]
       }
     }
 
@@ -67,7 +67,7 @@ var mergeTwoLists = function(l1, l2) {
       while (small.next && small.next.val < big.val) {
         small = small.next
       }
-      [small.next, small, big] = [big, big, small.next]
+      ;[small.next, small, big] = [big, big, small.next]
     }
     while (big)
 

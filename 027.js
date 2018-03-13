@@ -39,7 +39,7 @@ var removeElement = function(nums, val) {
       while (nums[q] === val && p < q) {
         q--
       }
-      [nums[p], nums[q]] = [nums[q], nums[p]]
+      ;[nums[p], nums[q]] = [nums[q], nums[p]]
     }
 
     return nums[p] === val ? p : p + 1

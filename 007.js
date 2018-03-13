@@ -24,7 +24,7 @@ var reverse = function(x) {
     const num = +(
       (x < 0 ? '-' : '')
       + x.toString()
-        .replace(/^-|0+$/, '')
+        .replace(/^-|0+$/g, '')
         .split('')
         .reverse()
         .join('')
