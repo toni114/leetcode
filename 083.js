@@ -10,20 +10,46 @@
  * @return {ListNode}
  */
 var deleteDuplicates = function(head) {
-  let node = head
+  const USE_MAYBE_BETTER_VERSION = false
 
-  while (node) {
-    const start = node
-    const value = node.val
+  if (USE_MAYBE_BETTER_VERSION) {
 
     // 两层循环虽然略显啰嗦，但是重复率高的话也许有些许性能优势。。？
-    do {
-      node = node.next
+
+    let node = head
+
+    while (node) {
+      const start = node
+      const value = node.val
+
+      do {
+        node = node.next
+      }
+      while (node && node.val === value)
+
+      start.next = node
     }
-    while (node && node.val === value)
 
-    start.next = node
+    return head
+
   }
+  else {
 
-  return head
+    // 最简单的方法
+
+    let node = head
+
+    while (node) {
+      const next = node.next
+      if (next && next.val === node.val) {
+        node.next = next.next
+      }
+      else {
+        node = node.next
+      }
+    }
+
+    return head
+
+  }
 };

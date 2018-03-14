@@ -3,6 +3,9 @@
  * @return {boolean}
  */
 var isValid = function(s) {
+  // TODO 把栈放在递归里，实现个简单的
+  // TODO 再加一个低效但有意思的递归实现，可用于简单的表达式计算
+
   // 重要性能优化点
   if (s.length % 2) {
     return false

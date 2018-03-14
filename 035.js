@@ -4,6 +4,7 @@
  * @return {number}
  */
 var searchInsert = function(nums, target) {
+  // TODO 用递归解一下
   // 经典的二分查找，还顺带解决了插入位置的问题
 
   let low = 0
@@ -24,7 +25,7 @@ var searchInsert = function(nums, target) {
     }
 
     // 确保每趟查询后区间必定收缩（因而不会陷入死循环）；
-    // 若有解，因每次收缩都在正确方向上并且不会越界，最终一定会重合、命中；
+    // 若有解，因每次收缩都在正确方向上并且不会越界或逆序，最终一定会重合、命中；
     // 若无解，最后一趟边界条件为 low === mid === high / high - 1，
     // 这时候 high 不重要，重要的是目标值如果偏小则 low 不变，否则 +1，恰好对应所需位置
     if (target < value) {

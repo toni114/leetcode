@@ -73,6 +73,9 @@ var reverse = function(x) {
     }
 
     // 别一上来就想着逐数字比对…… 纯算术运算可以 O(1) 解决
+    // 可以算是高精度大整数（而不是大字符串）运算/转化的一个简化特例吧
+    // C/C++ 里也不能根据符号是否反转来判断溢出。。。因为这个取决于溢出了多少
+    //       但是也许可以简化为用 double/float / long long 来 存储 / 运算 ？
     if (result > MAGIC_GUARD_NUM
       || result === MAGIC_GUARD_NUM && x > MAGIC_GUARD_DIGIT
     ) {
